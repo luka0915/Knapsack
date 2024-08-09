@@ -126,7 +126,7 @@ def train(n_episodes=N_EPISODES):
         agent.decay_epsilon()
 
         if episode % (N_EPISODES//10) == 0:
-            print(f"Episode: {episode}, Selected Items: {env.selected_items}, Total Value: {env.total_value}, Total Weight: {env.total_weight}, Total Volume: {env.total_volume}, Epsilon: {agent.epsilon:.4f}")
+            print(f"Episode: {episode}, Selected Items: {env.selected_items}, Total Value: {env.total_value}, Total Weight: {env.total_weight}, Epsilon: {agent.epsilon:.4f}")
 
     return env, agent
 
@@ -144,7 +144,6 @@ def test(env, agent):
     print("Final Selected Items:", env.selected_items)
     print("Total Value:", env.total_value)
     print("Total Weight:", env.total_weight)
-    print("Total Volume:", env.total_volume)
 
 
 if __name__ == "__main__":
